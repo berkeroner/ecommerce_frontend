@@ -239,8 +239,6 @@ describe('CheckoutPage', () => {
 
     await waitFor(() => expect(createOrderMock).toHaveBeenCalledWith({
       customer_id: 12,
-      payment_method: 'credit_card',
-      shipping_provider: 'standard',
       shipping_address_id: 21,
       items: [{ product_id: 7, quantity: 2 }],
     }))

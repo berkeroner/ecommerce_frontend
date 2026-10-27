@@ -60,8 +60,6 @@ export async function createAddress(customerId: number, request: AddressRequest)
 
 export async function createOrder(request: {
   customer_id: number
-  payment_method: PaymentMethod
-  shipping_provider: string
   shipping_address_id: number
   items: Array<{ product_id: number; quantity: number }>
 }): Promise<OrderResult> {
