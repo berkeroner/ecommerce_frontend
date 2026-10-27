@@ -90,8 +90,6 @@ export function CheckoutPage({ items, user, onRequireAuth, onCompleted }: Checko
       if (!customerId || effectiveAddressId === null) throw new Error('ADDRESS_REQUIRED')
       const order = await createOrder({
         customer_id: customerId,
-        payment_method: paymentMethod,
-        shipping_provider: 'standard',
         shipping_address_id: effectiveAddressId,
         items: items.map((item) => ({ product_id: item.product.id, quantity: item.quantity })),
       })
